@@ -1,0 +1,52 @@
+{
+ "app": "vdeal_custom_app",
+ "creation": "2026-05-19 20:41:48.552171",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "header_icon": "aperture",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "airplay",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Service Request",
+   "link_to": "Service Request",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "align-horizontal-distribute-center",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Service Visit",
+   "link_to": "Service Visit",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "align-horizontal-justify-end",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Service Challan",
+   "link_to": "Service Challan",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-05-19 20:41:48.552171",
+ "modified_by": "Administrator",
+ "name": "Vdeal",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "Vdeal"
+}

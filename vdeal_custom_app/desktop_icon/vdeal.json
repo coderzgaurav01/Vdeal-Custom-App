@@ -1,0 +1,21 @@
+{
+ "app": "vdeal_custom_app",
+ "bg_color": "gray",
+ "creation": "2026-05-13 10:43:36.428045",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "Vdeal",
+ "link_to": "Vdeal",
+ "link_type": "Workspace Sidebar",
+ "modified": "2026-05-19 20:42:03.261181",
+ "modified_by": "Administrator",
+ "name": "Vdeal",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [],
+ "sidebar": "Vdeal",
+ "standard": 1
+}

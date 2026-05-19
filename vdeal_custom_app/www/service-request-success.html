@@ -1,0 +1,112 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<style>
+
+.success-wrapper {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f5f6f8;
+}
+
+.success-card {
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    max-width: 600px;
+}
+
+.success-icon {
+
+    font-size: 70px;
+
+    color: #22c55e;
+
+    margin-bottom: 20px;
+}
+
+.success-title {
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.success-text {
+
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+.home-btn {
+
+    background: #e31b23;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+</style>
+
+<div class="success-wrapper">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✅
+        </div>
+
+        <div class="success-title">
+            Service Request Submitted
+        </div>
+
+        <div class="success-text">
+
+            Your request has been successfully submitted.
+
+            Our service team will contact you shortly.
+
+        </div>
+
+        <a
+            href="/service-request"
+            class="home-btn"
+        >
+
+            Create Another Request
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

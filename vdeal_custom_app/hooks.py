@@ -146,6 +146,7 @@ app_license = "mit"
 # 	}
 # }
 
+
 # Scheduled Tasks
 # ---------------
 
@@ -255,4 +256,30 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
+fixtures =[
+    {
+        "dt":"Workflow",
+        "filters":[
+            [
+                "name","in",
+                [
+                    "Service Request Workflow","Service Visit Flow"
 
+
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype":"Workflow State",
+        "filters":[["name","in",["Draft","Open","Rejected","Approved","Pending","Assigned","Visit Scheduled","In Progress","Waiting MOM Approval","Completed","Cancelled","Scheduled"]]]
+    },
+    {
+        "doctype":"Workflow Action Master",
+        "filters":[["name","in",["Approve","Reject","Review","Submit","Schedule Visit","Start Work","Submit MOM","Complete SR","Create Next Visit","Schedule","Approve MOM","Complete Visit"]]]
+    },
+    {
+        "doctype":"Role",
+        "filters":[["name","in",["Service Manager","Service Engineer"]]]
+    }
+]

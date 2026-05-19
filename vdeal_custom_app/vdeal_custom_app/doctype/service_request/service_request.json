@@ -1,0 +1,499 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-09 13:59:38.320900",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_wk2k",
+  "amended_from",
+  "request_type",
+  "sr_date",
+  "column_break_vhxf",
+  "existing_sr_id",
+  "customer_details_section",
+  "customer_name",
+  "mobile_number",
+  "email_id",
+  "address",
+  "column_break_mcxd",
+  "contact_person",
+  "alternate_number",
+  "city",
+  "state",
+  "pincode",
+  "service_details_section",
+  "nature_of_job",
+  "product__equipment",
+  "complaint_description",
+  "column_break_cuxf",
+  "service_required_for",
+  "product_serial_number",
+  "scope_of_work",
+  "payment_details_section",
+  "payment_type",
+  "po_date",
+  "warranty_status",
+  "column_break_yhhr",
+  "estimated_cost",
+  "po_number",
+  "po_copy",
+  "priority_details_section",
+  "priority_level",
+  "priority_reason",
+  "column_break_tesz",
+  "expected_visit_date",
+  "assignment_details_section",
+  "assigned_engineer",
+  "assigned_by",
+  "column_break_ikqg",
+  "assigned_date",
+  "visit_tracking_section",
+  "total_visits",
+  "last_visit_date",
+  "column_break_ctgv",
+  "current_visit_number",
+  "next_visit_required",
+  "next_visit_date",
+  "reschedule_details_section",
+  "is_rescheduled",
+  "reschedule_count",
+  "reschedule_reason",
+  "column_break_jhrd",
+  "last_rescheduled_by",
+  "original_visit_date",
+  "status_details_section",
+  "status",
+  "workflow_state",
+  "completion_status",
+  "billing_details_section",
+  "billing_status",
+  "sales_invoice",
+  "invoice_amount",
+  "attachments_section",
+  "site_images",
+  "column_break_fesl",
+  "additional_documents"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_wk2k",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "sr_date",
+   "fieldtype": "Date",
+   "label": "SR Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vhxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.request_type == \"Existing SR\"",
+   "fieldname": "existing_sr_id",
+   "fieldtype": "Link",
+   "label": "Existing SR ID",
+   "options": "Service Request"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "alternate_number",
+   "fieldtype": "Data",
+   "label": "Alternate Number"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "column_break_mcxd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "service_details_section",
+   "fieldtype": "Section Break",
+   "label": "Service Details"
+  },
+  {
+   "fieldname": "nature_of_job",
+   "fieldtype": "Select",
+   "label": "Nature of Job",
+   "options": "\nCommissioning\nService\nAMC\nRetrofit\nTroubleshooting"
+  },
+  {
+   "fieldname": "product__equipment",
+   "fieldtype": "Link",
+   "label": "Product / Equipment",
+   "options": "Item"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Text Editor",
+   "label": "Complaint Description"
+  },
+  {
+   "fieldname": "column_break_cuxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_required_for",
+   "fieldtype": "Data",
+   "label": "Service Required For"
+  },
+  {
+   "fieldname": "product_serial_number",
+   "fieldtype": "Data",
+   "label": "Product Serial Number"
+  },
+  {
+   "fieldname": "scope_of_work",
+   "fieldtype": "Text Editor",
+   "label": "Scope of Work"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Select",
+   "label": "Payment Type",
+   "options": "\nPaid\nManufacturing PO\nTrading PO\nFree"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Date",
+   "label": "PO Date"
+  },
+  {
+   "fieldname": "warranty_status",
+   "fieldtype": "Select",
+   "label": "Warranty Status",
+   "options": "\nIn Warranty\nOut of Warranty\nAMC Covered"
+  },
+  {
+   "fieldname": "column_break_yhhr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_number",
+   "fieldtype": "Data",
+   "label": "PO Number"
+  },
+  {
+   "fieldname": "po_copy",
+   "fieldtype": "Attach",
+   "label": "PO Copy"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "priority_details_section",
+   "fieldtype": "Section Break",
+   "label": "Priority Details"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "\nHigh\nMedium\nLow"
+  },
+  {
+   "depends_on": "eval: doc.priority_level == \"High\"",
+   "fieldname": "priority_reason",
+   "fieldtype": "Small Text",
+   "label": "Priority Reason"
+  },
+  {
+   "fieldname": "column_break_tesz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_visit_date",
+   "fieldtype": "Date",
+   "label": "Expected Visit Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "assignment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Assignment Details"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "label": "Assigned Engineer",
+   "options": "User"
+  },
+  {
+   "fieldname": "assigned_by",
+   "fieldtype": "Link",
+   "label": "Assigned By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_ikqg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_date",
+   "fieldtype": "Datetime",
+   "label": "Assigned Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "visit_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Tracking"
+  },
+  {
+   "fieldname": "total_visits",
+   "fieldtype": "Int",
+   "label": "Total Visits"
+  },
+  {
+   "fieldname": "last_visit_date",
+   "fieldtype": "Date",
+   "label": "Last Visit Date"
+  },
+  {
+   "fieldname": "column_break_ctgv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_visit_number",
+   "fieldtype": "Int",
+   "label": "Current Visit Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "next_visit_required",
+   "fieldtype": "Check",
+   "label": "Next Visit Required"
+  },
+  {
+   "depends_on": "eval: doc.next_visit_required == 1;",
+   "fieldname": "next_visit_date",
+   "fieldtype": "Date",
+   "label": "Next Visit Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reschedule_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reschedule Details"
+  },
+  {
+   "depends_on": "eval:doc.is_rescheduled==1",
+   "fieldname": "reschedule_count",
+   "fieldtype": "Int",
+   "label": "Reschedule Count"
+  },
+  {
+   "depends_on": "eval:doc.is_rescheduled==1",
+   "fieldname": "reschedule_reason",
+   "fieldtype": "Small Text",
+   "label": "Reschedule Reason",
+   "mandatory_depends_on": "eval:doc.is_rescheduled==1"
+  },
+  {
+   "fieldname": "column_break_jhrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_rescheduled==1",
+   "fieldname": "last_rescheduled_by",
+   "fieldtype": "Link",
+   "label": "Last Rescheduled By",
+   "options": "User"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "status_details_section",
+   "fieldtype": "Section Break",
+   "label": "Status Details"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nOpen\nAssigned\nVisit Scheduled\nIn Progress\nWaiting MOM Approval\nCompleted\nClosed\nCancelled"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "label": "Workflow State"
+  },
+  {
+   "fieldname": "completion_status",
+   "fieldtype": "Select",
+   "label": "Completion Status",
+   "options": "\nCompleted\nNot Completed"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "billing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "fieldname": "billing_status",
+   "fieldtype": "Select",
+   "label": "Billing Status",
+   "options": "\nBilled\nYet to Billed"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Amount"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "site_images",
+   "fieldtype": "Attach",
+   "label": "Site Images"
+  },
+  {
+   "fieldname": "column_break_fesl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "additional_documents",
+   "fieldtype": "Attach",
+   "label": "Additional Documents"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "label": "Request Type ",
+   "options": "New SR\nExisting SR"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rescheduled",
+   "fieldtype": "Check",
+   "label": "Is Rescheduled"
+  },
+  {
+   "fieldname": "original_visit_date",
+   "fieldtype": "Date",
+   "label": "Original Visit Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Service",
+   "link_doctype": "Service Challan",
+   "link_fieldname": "sr"
+  },
+  {
+   "group": "Service",
+   "link_doctype": "Service Visit",
+   "link_fieldname": "sr"
+  }
+ ],
+ "modified": "2026-05-13 00:31:51.830963",
+ "modified_by": "Administrator",
+ "module": "Vdeal Custom App",
+ "name": "Service Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

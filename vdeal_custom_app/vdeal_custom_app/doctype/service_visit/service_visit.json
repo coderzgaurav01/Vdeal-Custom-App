@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-06 21:57:27.811967",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1ceu",
+  "sr",
+  "engineer",
+  "status",
+  "column_break_unhq",
+  "visit_number",
+  "visit_date",
+  "amended_from",
+  "media_upload_section",
+  "before_photo",
+  "column_break_gjpt",
+  "after_photo",
+  "task_logs_section",
+  "daily_task_logs",
+  "mom_details_section",
+  "mom_upload",
+  "mom_remarks",
+  "manager_review_section",
+  "reviewed_by",
+  "manager_remarks",
+  "column_break_amor",
+  "reviewed_on",
+  "approved_by_manager",
+  "reschedule_details_section",
+  "reschedule_count",
+  "reschedule_reason",
+  "column_break_mnjc",
+  "rescheduled_by",
+  "is_rescheduled",
+  "next_visit_decision_section",
+  "next_visit_required",
+  "next_visit_notes",
+  "column_break_xzdw",
+  "next_visit_date",
+  "billing_section",
+  "ready_for_billing",
+  "sales_invoice",
+  "extra_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1ceu",
+   "fieldtype": "Section Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Visit",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "sr",
+   "fieldtype": "Link",
+   "label": "SR",
+   "options": "Service Request",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "sr.assigned_engineer",
+   "fieldname": "engineer",
+   "fieldtype": "Link",
+   "label": "Engineer",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPlanned\nProgress\nComplete"
+  },
+  {
+   "fieldname": "column_break_unhq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_number",
+   "fieldtype": "Int",
+   "label": "Visit Number"
+  },
+  {
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "label": "Visit Date"
+  },
+  {
+   "fieldname": "media_upload_section",
+   "fieldtype": "Section Break",
+   "label": "Media Upload"
+  },
+  {
+   "fieldname": "before_photo",
+   "fieldtype": "Attach",
+   "label": "Before Photo"
+  },
+  {
+   "fieldname": "column_break_gjpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "after_photo",
+   "fieldtype": "Attach",
+   "label": "After Photo"
+  },
+  {
+   "fieldname": "extra_section",
+   "fieldtype": "Section Break",
+   "label": "Extra"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "task_logs_section",
+   "fieldtype": "Section Break",
+   "label": "Task Logs"
+  },
+  {
+   "fieldname": "daily_task_logs",
+   "fieldtype": "Table",
+   "label": "Daily Task Logs",
+   "options": "Visit Log"
+  },
+  {
+   "fieldname": "mom_details_section",
+   "fieldtype": "Section Break",
+   "label": "MOM Details"
+  },
+  {
+   "fieldname": "mom_upload",
+   "fieldtype": "Attach",
+   "label": "MOM Upload"
+  },
+  {
+   "fieldname": "mom_remarks",
+   "fieldtype": "Small Text",
+   "label": "MOM Remarks"
+  },
+  {
+   "fieldname": "manager_review_section",
+   "fieldtype": "Section Break",
+   "label": "Manager Review"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "manager_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Manager Remarks"
+  },
+  {
+   "fieldname": "column_break_amor",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved_by_manager",
+   "fieldtype": "Check",
+   "label": "Approved By Manager"
+  },
+  {
+   "fieldname": "next_visit_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Next Visit Decision"
+  },
+  {
+   "default": "0",
+   "fieldname": "next_visit_required",
+   "fieldtype": "Check",
+   "label": "Next Visit Required"
+  },
+  {
+   "fieldname": "next_visit_notes",
+   "fieldtype": "Small Text",
+   "label": "Next Visit Notes"
+  },
+  {
+   "fieldname": "column_break_xzdw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_visit_date",
+   "fieldtype": "Date",
+   "label": "Next Visit Date"
+  },
+  {
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Billing"
+  },
+  {
+   "default": "0",
+   "fieldname": "ready_for_billing",
+   "fieldtype": "Check",
+   "label": "Ready For Billing"
+  },
+  {
+   "depends_on": "eval:doc.ready_for_billing == 1",
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "reschedule_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reschedule Details"
+  },
+  {
+   "fieldname": "reschedule_count",
+   "fieldtype": "Int",
+   "label": "Reschedule Count"
+  },
+  {
+   "fieldname": "reschedule_reason",
+   "fieldtype": "Small Text",
+   "label": "Reschedule Reason"
+  },
+  {
+   "fieldname": "column_break_mnjc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rescheduled_by",
+   "fieldtype": "Link",
+   "label": "Rescheduled By",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rescheduled",
+   "fieldtype": "Check",
+   "label": "Is Rescheduled"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-10 15:40:55.683950",
+ "modified_by": "Administrator",
+ "module": "Vdeal Custom App",
+ "name": "Service Visit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

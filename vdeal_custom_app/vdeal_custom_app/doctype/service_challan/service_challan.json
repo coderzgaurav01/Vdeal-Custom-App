@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-06 22:05:32.795427",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vijt",
+  "sr",
+  "challan_date",
+  "service_engineer",
+  "amended_from",
+  "column_break_puih",
+  "visit",
+  "consultant_person",
+  "section_break_wino",
+  "returnable_items",
+  "non_returnable_items_section",
+  "non_returnable_items",
+  "status_section",
+  "select",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vijt",
+   "fieldtype": "Section Break",
+   "label": "Basic info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Challan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "sr",
+   "fieldtype": "Link",
+   "label": "SR",
+   "options": "Service Request",
+   "search_index": 1
+  },
+  {
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "label": "Challan Date"
+  },
+  {
+   "fieldname": "column_break_puih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit",
+   "fieldtype": "Link",
+   "label": "Visit",
+   "options": "Service Visit"
+  },
+  {
+   "fieldname": "consultant_person",
+   "fieldtype": "Link",
+   "label": "Consultant Person",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_wino",
+   "fieldtype": "Section Break",
+   "label": "Returnable Items"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "select",
+   "fieldtype": "Select",
+   "label": "Select",
+   "options": "\nDraft\nIssued\nPartially Returned\nReturned\nClosed"
+  },
+  {
+   "fetch_from": "visit.engineer",
+   "fieldname": "service_engineer",
+   "fieldtype": "Link",
+   "label": "Service Engineer",
+   "options": "User"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "returnable_items",
+   "fieldtype": "Table",
+   "label": "Returnable Items",
+   "options": "Challan Item"
+  },
+  {
+   "fieldname": "non_returnable_items_section",
+   "fieldtype": "Section Break",
+   "label": "Non Returnable Items"
+  },
+  {
+   "fieldname": "non_returnable_items",
+   "fieldtype": "Table",
+   "label": "Non Returnable Items",
+   "options": "Non Returnable Item"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-11 14:50:50.278140",
+ "modified_by": "Administrator",
+ "module": "Vdeal Custom App",
+ "name": "Service Challan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -56,29 +56,42 @@ class ServiceRequest(Document):
 				"email"
 			)
 
-			subject = f"""
-			New Service Request Assigned:
-			{self.name}
-			"""
+			subject = f"New Service Request Assigned: {self.name}"
 
 			message = f"""
-			Dear Engineer,
+			<html>
+				<body>
+					<p>Dear Engineer,</p>
 
-			A new Service Request has been assigned.
+					<p>A new Service Request has been assigned.</p>
 
-			SR ID: {self.name}
+					<table border="0" cellpadding="6" cellspacing="0">
+						<tr>
+							<td><b>SR ID:</b></td>
+							<td>{self.name}</td>
+						</tr>
+						<tr>
+							<td><b>Customer:</b></td>
+							<td>{self.customer_name}</td>
+						</tr>
+						<tr>
+							<td><b>Priority:</b></td>
+							<td>{self.priority_level}</td>
+						</tr>
+						<tr>
+							<td><b>Expected Visit Date:</b></td>
+							<td>{self.expected_visit_date}</td>
+						</tr>
+					</table>
 
-			Customer:
-			{self.customer_name}
+					<br>
 
-			Priority:
-			{self.priority_level}
-
-			Expected Visit Date:
-			{self.expected_visit_date}
-
-			Regards,
-			Service Team
+					<p>
+						Regards,<br>
+						Service Team
+					</p>
+				</body>
+			</html>
 			"""
 
 			send_fsm_email(

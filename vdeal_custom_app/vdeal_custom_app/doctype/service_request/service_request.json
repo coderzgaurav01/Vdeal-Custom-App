@@ -13,47 +13,55 @@
   "existing_sr_id",
   "customer_details_section",
   "customer_name",
-  "mobile_number",
   "email_id",
-  "address",
+  "state",
   "column_break_mcxd",
   "contact_person",
   "alternate_number",
-  "city",
-  "state",
   "pincode",
+  "column_break_amfd",
+  "mobile_number",
+  "city",
+  "address",
   "service_details_section",
   "nature_of_job",
-  "product__equipment",
-  "complaint_description",
+  "product_serial_number",
   "column_break_cuxf",
   "service_required_for",
-  "product_serial_number",
   "scope_of_work",
+  "column_break_vtgx",
+  "product__equipment",
+  "complaint_description",
   "payment_details_section",
   "payment_type",
-  "po_date",
-  "warranty_status",
+  "po_number",
   "column_break_yhhr",
   "estimated_cost",
-  "po_number",
   "po_copy",
+  "column_break_enlf",
+  "po_date",
+  "warranty_status",
   "priority_details_section",
   "priority_level",
   "priority_reason",
   "column_break_tesz",
   "expected_visit_date",
+  "attachments_section",
+  "site_images",
+  "column_break_fesl",
+  "additional_documents",
   "assignment_details_section",
   "assigned_engineer",
-  "assigned_by",
   "column_break_ikqg",
+  "assigned_by",
+  "column_break_lmvs",
   "assigned_date",
   "visit_tracking_section",
+  "next_visit_required",
   "total_visits",
   "last_visit_date",
   "column_break_ctgv",
   "current_visit_number",
-  "next_visit_required",
   "next_visit_date",
   "reschedule_details_section",
   "is_rescheduled",
@@ -64,20 +72,19 @@
   "original_visit_date",
   "status_details_section",
   "status",
-  "workflow_state",
+  "column_break_cbcd",
   "completion_status",
+  "column_break_olxc",
+  "workflow_state",
   "billing_details_section",
   "billing_status",
+  "column_break_lfbh",
   "sales_invoice",
-  "invoice_amount",
-  "attachments_section",
-  "site_images",
-  "column_break_fesl",
-  "additional_documents"
+  "column_break_hicm",
+  "invoice_amount"
  ],
  "fields": [
   {
-   "collapsible": 1,
    "fieldname": "section_break_wk2k",
    "fieldtype": "Section Break",
    "label": "Basic Details"
@@ -110,7 +117,6 @@
    "options": "Service Request"
   },
   {
-   "collapsible": 1,
    "fieldname": "customer_details_section",
    "fieldtype": "Section Break",
    "label": "Customer Details"
@@ -165,7 +171,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "collapsible": 1,
    "fieldname": "service_details_section",
    "fieldtype": "Section Break",
    "label": "Service Details"
@@ -184,7 +189,7 @@
   },
   {
    "fieldname": "complaint_description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Long Text",
    "label": "Complaint Description"
   },
   {
@@ -203,7 +208,7 @@
   },
   {
    "fieldname": "scope_of_work",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Long Text",
    "label": "Scope of Work"
   },
   {
@@ -271,7 +276,6 @@
    "label": "Expected Visit Date"
   },
   {
-   "collapsible": 1,
    "fieldname": "assignment_details_section",
    "fieldtype": "Section Break",
    "label": "Assignment Details"
@@ -306,7 +310,8 @@
   {
    "fieldname": "total_visits",
    "fieldtype": "Int",
-   "label": "Total Visits"
+   "label": "Total Visits",
+   "read_only": 1
   },
   {
    "fieldname": "last_visit_date",
@@ -320,7 +325,8 @@
   {
    "fieldname": "current_visit_number",
    "fieldtype": "Int",
-   "label": "Current Visit Number"
+   "label": "Current Visit Number",
+   "read_only": 1
   },
   {
    "default": "0",
@@ -379,6 +385,7 @@
   {
    "fieldname": "workflow_state",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Workflow State"
   },
   {
@@ -400,6 +407,7 @@
    "options": "\nBilled\nYet to Billed"
   },
   {
+   "depends_on": "eval: doc.billing_status == \"Billed\"",
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
    "label": "Sales Invoice",
@@ -437,6 +445,7 @@
    "options": "New SR\nExisting SR"
   },
   {
+   "depends_on": "eval:doc.payment_type != \"Free\" ",
    "fieldname": "estimated_cost",
    "fieldtype": "Currency",
    "label": "Estimated Cost",
@@ -452,6 +461,38 @@
    "fieldname": "original_visit_date",
    "fieldtype": "Date",
    "label": "Original Visit Date"
+  },
+  {
+   "fieldname": "column_break_amfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vtgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_enlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lmvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cbcd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_olxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lfbh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hicm",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
@@ -469,7 +510,7 @@
    "link_fieldname": "sr"
   }
  ],
- "modified": "2026-05-13 00:31:51.830963",
+ "modified": "2026-05-23 01:54:21.735592",
  "modified_by": "Administrator",
  "module": "Vdeal Custom App",
  "name": "Service Request",
